@@ -21,11 +21,18 @@ module.exports = {
         }),
       },
       {
+        test: /\.styl$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'stylus-loader'],
+        }),
+      },
+      {
         test: /\.pug$/,
         use: { loader: 'pug-loader' },
       },
       {
-        test: /\.(eot|woff2?|ttf|svg)(\?.*)?$/,
+        test: /\.(png|gif|jpg|eot|woff2?|ttf|svg)(\?.*)?$/,
         use: { loader: 'url-loader' },
       },
     ],

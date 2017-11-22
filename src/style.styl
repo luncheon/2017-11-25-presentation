@@ -1,0 +1,134 @@
+@font-face
+  font-family 'GenJyuuGothicX'
+  src url(./assets/GenJyuuGothicX-Medium.woff2)
+
+@font-face
+  src url(./assets/ArbutusSlab.woff)
+  font-family 'ArbutusSlab'
+
+:root
+  box-sizing border-box
+
+*
+*::before
+*::after
+  box-sizing inherit
+
+body
+  font-family 'ArbutusSlab', 'GenJyuuGothicX', sans-serif
+
+section
+caption
+  text-align left
+  text-align left
+
+button
+a[href]
+  &:not([disabled])
+    cursor pointer
+
+.block
+  display block
+.width-fill
+  width 100%
+.strong-color
+  color yellow
+
+.text-left
+  text-align left
+.text-center
+  text-align center
+.text-right
+  text-align right
+
+.link-text
+  .reveal &
+    font-family 'Segoe UI',sans-serif
+  aside &
+    text-align right
+    font-size 50%
+    &:first-child
+      margin-top 5%
+
+.reveal
+  font-family inherit
+
+  h1, h2, h3, h4, h5, h6
+    font-family inherit
+    text-transform none
+
+  h6
+    font-weight normal
+    margin-bottom 1em
+
+  p
+    margin .5em 0
+
+  ol, ul
+    display block
+    margin-left 1.5em
+
+  dt
+    font-size 90%
+    font-weight inherit
+    margin-bottom .5em
+    &:not(:first-child)
+      margin-top 1em
+  dd
+    font-size 75%
+
+  table > tbody > tr:last-child
+    th, td
+      border-bottom-style solid
+      border-bottom-width 1px
+
+  blockquote
+    width auto
+    font-style normal
+
+  section img
+    margin 0
+    background-color transparent
+
+  .controls button
+    outline none
+    opacity 0
+
+  .slide-number
+    background-color transparent
+    color #42affa
+    font-size 16px
+    left 10px
+    bottom 10px
+    right initial
+
+  .progress::after
+    transition background-color .3s ease-out
+  .progress:hover::after
+    cursor pointer
+    background-color rgba(255,255,255,.1)
+
+  img.no-border
+    border: none;
+
+  ul.list-style-caret
+    list-style-type none
+    margin-left .5em
+    > li::before
+      content '\025B8'
+      margin-right .5em
+
+.icon-button
+  width 2em
+  height 2em
+  font-size 1.5em
+  border-radius 50%
+  color inherit
+  background-color transparent
+  border none
+  outline none
+  padding 0
+  transition background-color .3s ease-in-out
+
+  &:hover
+    background-color rgba(255,255,255,.1)

@@ -5,8 +5,10 @@ import Reveal from 'reveal.js'
 import 'reveal.js/css/reveal.css'
 import 'reveal.js/css/theme/black.css'
 
-import './style.css'
+import 'mdi/css/materialdesignicons.css'
+import './style.styl'
 
 Highlight.registerLanguage('xml', require('highlight.js/lib/languages/xml'))
 Highlight.initHighlightingOnLoad()
+
 Reveal.initialize({ slideNumber: 'c/t' })
