@@ -1,6 +1,355 @@
-section.text-center.
-  ダミー コンテンツ
+mixin link(href)
+  a.block.link-text(target='_blank' href=href style!=attributes.style)
+    p(style='color: white; margin: 0;')
+      block
+    p(style='margin: 0;')= href
+    
 
 section
-  pre: code.
-    #{'<div>ダミー ソースコード</div>'}
+  p.text-center(style='font-size: 120%;')
+    | 16～69歳の視覚障がい者の <span class="strong-color"><strong style="font-size: 150%;">91.7</strong>%</span> が<br>
+    | インターネットを利用しています。
+  aside: +link('http://www.soumu.go.jp/iicp/chousakenkyu/data/research/survey/telecom/2012/disabilities2012.pdf')
+    | 障がいのある方々のインターネット等の利用に関する調査研究［結果概要］<br>
+    | 平成２４年６月 総務省 情報通信政策研究所 調査研究部
+
+section
+  h1.text-center(style='font-size: 150%; line-height: 1.4;')
+    | 視覚障がい者のための<br>
+    | Web アクセシビリティ<br>
+    | 入門以前
+  div.text-right(style='margin-top: 10%;')
+    | 2017年11月25日
+
+//- section
+//-   p(style='margin-top: 5%; font-size: 85%;')
+//-     | 日本の視覚障がい者数は約 34 万人<br>
+//-     | （2015 年末時点の手帳交付者数）
+//-   p(style='margin-top: 5%; font-size: 85%;')
+//-     | 日本の視覚障がい認定基準は米国等と比べると厳しく<br>
+//-     | 米国基準に照らせば約 164 万人になるとの試算も<br>
+//-     | （2007 年時点／日本眼科医会）
+//-   aside: +link('http://www.mhlw.go.jp/stf/shingi/other-syougai.html?tid=404284', 'font-size: 50%; margin-top: 5%; text-align: left;')
+//-     | 2017 年に厚生労働省で「視覚障害の認定基準に関する検討会」が開催されています
+
+section.text-center(style='font-size: 125%;')
+  h6
+    | 障がいのある方への<br>
+    strong.strong-color 合理的配慮
+    | が求められています。
+
+section
+  p
+    | 2016年4月1日<br>
+    | 障害を理由とする差別の解消の推進に関する法律（障害者差別解消法）が施行されました。
+  div(style='margin-top: 5%; font-size: 75%;')
+    p 概要
+    ol
+      li 何人も、障害者に対して、障害を理由として、差別することその他の権利利益を侵害する行為をしてはならない。
+      li 社会的障壁の除去は、それを必要としている障害者が現に存し、かつ、その実施に伴う負担が過重でないときは、
+        span.strong-color それを怠ることによつて前項の規定に違反することとならないよう、その実施について必要かつ合理的な配慮がされなければならない。
+  aside: +link('http://www8.cao.go.jp/shougai/suishin/sabekai.html')(style='font-size: 50%; margin-top: 5%;')
+    | 障害を理由とする差別の解消の推進 - 内閣府
+
+section.text-center(style='font-size: 125%;')
+  p
+    | よく分かりませんが<br>
+    | 合理的な配慮が要るみたいです。
+
+section
+  p(style='font-size: 75%; margin: 0;') ちなみにどこかで見たような 5 段階評価表があったりもします
+  img(src=require('./assets/ウェブアクセシビリティ取組確認・評価表.png') alt='ウェブアクセシビリティ取組確認・評価表のエクセルシート画面キャプチャー' style='margin: 0;')
+  aside: +link('http://www.soumu.go.jp/main_sosiki/joho_tsusin/b_free/guideline.html')(style='margin: 0;')
+    | 総務省｜情報バリアフリー環境の整備｜みんなの公共サイト運用ガイドライン（2016年版）
+
+section.text-center(style='font-size: 125%;')
+  h6 視覚障がい者の Web 利用方法
+
+section
+  h6 視覚障がい者の Web 利用方法
+  dl
+    dt 全盲
+    dd
+      p 主に音声読み上げソフトを利用
+    dt
+      | ロービジョン
+      span(style='font-size: 60%;') （昔は弱視と呼ばれた）
+    dd
+      p
+        | 見え方や見えやすい条件に多様な個人差がある<br>
+        | Web 利用方法も様々
+      ul
+        li 音声読み上げソフトを利用
+        li 配色・文字サイズ等を変更して利用（カスタム CSS 等）
+        li 画面拡大ソフトを利用
+        li 画面解像度を調整
+        li ディスプレイにレンズをあてて物理的に拡大
+
+section
+  h6 音声読み上げソフト
+  dl
+    dt スクリーンリーダー
+    dd(style='font-size: 70%;'): table.width-fill: tbody
+      tr
+        td PC-Talker
+        td <span style="visibility: hidden;">1</span>41,040 円 (税込)
+        td 国内シェア 85.3%
+      tr
+        td JAWS
+        td 153,360 円 (税込)
+        td
+      tr
+        td NVDA
+        td 無料
+        td オープンソース
+      tr
+        td ナレーター
+        td Windows 標準付属
+        td Ctrl + Win + Enter
+      tr
+        td VoiceOver
+        td macOS, iOS 標準付属
+        td
+    dt 音声ブラウザー
+    dd(style='font-size: 70%;'): table.width-fill: tbody
+      tr
+        td NetReader
+        td 30,240円 (税込)
+        td 要 PC-Talker
+      tr(style='text-decoration: line-through;')
+        td IBM Home Page Reader
+        td 販売終了
+        td IE 6 まで
+      tr
+        td ALTAIR (アルティア)
+        td 無料
+        td DL リンク切れ...
+
+section.text-center
+  h6 ［デモ］ 音声の読み上げを聴いてみましょう
+  aside(style='font-size: 60%;') ※ 発表者が使い慣れていない＆あがり症のため、まごつきますがご了承ください。
+
+section.text-center(style='font-size: 125%;')
+  h6 視覚障がい者を意識したマークアップ
+
+section
+  h6 視覚障がい者を意識したマークアップ
+  ul(style='font-size: 75%;')
+    li img 要素に alt 属性（代替テキスト）をつける
+    li ページの内容がわかるページタイトルをつける
+    li 1 つのページにコンテンツを詰め込み過ぎない
+    li サイト内検索機能を提供する
+    li フォームコントロール要素にラベルを付ける
+    li 意味のあるタグを使う（なんでもかんでも div にしない）
+    li 意味のあるリンクテキストにする（悪い例: “こちら”）
+    li すべての機能をキーボードから利用できるようにする
+    li 色を唯一の情報伝達手段にしない<br>（例: エラーを赤で表現するだけでなくエラー的文言も出す）
+    li 前景と背景の間に十分なコントラストを提供する
+    li 勝手に動きだすコンテンツ（例: カルーセル）には<br>止める手段を提供する
+    li 無限スクロールを使わない
+
+section
+  h6(style='margin: 0;') もっとほしいひとへ
+  +link('https://waic.jp/docs/WCAG20/Overview.html')(style='font-size: 75%;')
+    img(src=require('./assets/WCAG20.png') alt='WCAG ヘッダーのキャプチャー')
+    | Web Content Accessibility Guidelines (WCAG) 2.0 ［日本語訳］
+  aside(style='font-size: 60%; margin-top: 1em;'): p
+    | WCAG を日本語でどんな風に発音するかは不明<br>
+    | 英語では W をほぼ発音せず「ぅかーぐ」とか「かーぐ」とか言ってた<br>
+    | WebCAG ぐらいの略語にしてくれれば読みやすいのに...
+
+section
+  h6(style='font-size: 90%;') Web Content Accessibility Guidelines (WCAG) 2.0
+  p(style='font-size: 75%;')
+    | パッと見ハードル高そうな印象を受けるけど文章は割と平易
+  blockquote(style='font-size: 75%; margin: 1em; padding: .5em 1em; background-color: #CFE8EF; border: solid #666666 1px; color: black;')
+    | ガイドライン 1.1 テキストによる代替: すべての非テキストコンテンツには、拡大印刷、点字、音声、シンボル、平易な言葉などの利用者が必要とする形式に変換できるように、テキストによる代替を提供すること。
+  blockquote(style='font-size: 75%; margin: 1em; padding: .5em 1em; background-color: #CFE8EF; border: solid #666666 1px; color: black;')
+    | ガイドライン 2.1 キーボード操作可能: すべての機能をキーボードから利用できるようにすること。
+  p(style='font-size: 75%;')
+    | 目次ぐらい目を通しても損にはならない
+
+section.text-center
+  h6 音声読み上げソフトを意識したマークアップ
+
+section
+  h6 音声読み上げソフトを意識したマークアップ
+  dl
+    dt こんなときどうしよう
+    dd: ol
+      li アイコンボタンの意味を音声で説明したいけど画面には説明を出したくない
+      li 見た目を派手にするためだけの要素を読み飛ばしてほしい
+      li 「タブ」など HTML タグにない意味を要素に与えたい
+
+section
+  | [todo]
+  h6 1. アイコンボタンの意味を音声で説明したいけど画面には説明を出したくない
+  pre: code
+    | #{`<button\n  aria-label="お気に入りに追加"\n  aria-describedby="favorite-button-description"\n>`}
+    | #{'  <i class="mdi mdi-star"></i>'}
+    | #{'</button>'}
+    | #{'<p id="favorite-button-description" style="display: none;">'}
+    | #{'  選択されている項目をお気に入りに追加します'}
+    | #{'</p>'}
+  button.icon-button(aria-label="お気に入りに追加" aria-describedby="favorite-button-description"): i.mdi.mdi-star
+  p#favorite-button-description(style="display: none;") 選択されている項目をお気に入りに追加します
+
+section
+  | [todo]
+  h6 2. 見た目を派手にするためだけの要素を読み上げてほしくない
+  pre: code
+    | #{'<div aria-hidden>この要素は読み上げられません</div>'}
+  div(aria-hidden) この要素は読み上げられません
+
+section
+  | [todo]
+  h6 3. 「タブ」など HTML タグにない意味を要素に与えたい
+  pre: code
+    | #{'<div role="tablist">'}
+    | #{'  <input name="selectedTab" type="radio" role="tab">タブ１</input>'}
+    | #{'  <input name="selectedTab" type="radio" role="tab">タブ２</input>'}
+    | #{'  <input name="selectedTab" type="radio" role="tab">タブ３</input>'}
+    | #{'</div>'}
+
+section
+  p(style='font-size: 80%;') role 属性や aria-* 属性を規定する W3C 勧告<br>
+  h6
+    ruby
+      | WAI
+      rt ウェイ
+      | -
+      rt
+      | ARIA
+      rt アリア
+  aside(style='font-size: 60%; margin-top: 1em;'): p
+    | ARIA の発音は英語では「あ～りあ」みたいな感じ<br>
+    | （AR の音は argument の ar と同じ）<br>
+    | でもカタカナ語では「アリア」とするのが一般的みたい
+
+section
+  | [todo]
+  h6 WAI-ARIA
+  p
+    | WAI-ARIA のベストプラクティスは<br>
+    | 可能な限り WAI-ARIA を使わないこと
+
+section
+  | [todo]
+  p WAI-ARIA が規定する role （一部）
+
+section
+  | [todo]
+  p WAI-ARIA が規定する aria 属性（一部）
+
+section.text-center(style='font-size: 125%;')
+  h6 覚えきれません
+
+section
+  h6 覚えきれません
+  ul.list-style-caret
+    li コンポーネントライブラリを選ぶ
+    li メジャーどころだけ覚える
+  p(style='font-size: 75%; margin-top: 1em;')
+    | なるべく使わない方が良いものなので<br>
+    | 必死に覚えなくても良いと思います。個人的には。
+
+section
+  h6 視覚障がい者を意識した Web コンテンツ
+  dl
+    dt こんなときどうしよう
+    dd: ul
+      li
+        | ボット対策したい<br>
+        span(style='font-size: 90%;') （利用者がボットではなくヒトであることを確認したい）
+
+section
+  h6 ボット対策
+  dl
+    dt CAPTCHA （画像認証）
+    dd
+      p
+        | 歪んだ文字画像を表示して文字に起こさせることで<br>
+        | 利用者が人間であることを確認するツール
+      img.no-border(src=require('./assets/CAPTCHA.jpg') alt='CAPTCHA')
+      p
+        | 画像の代わりに音声を文字に起こす CAPTCHA もある<br>
+      p
+        strong.strong-color 画像だけの CAPTCHA は視覚障がい者の大敵
+  aside: +link('https://www.w3.org/TR/turingtest/')
+    | Inaccessibility of CAPTCHA
+
+section
+  h6 ボット対策
+  dl
+    dt No CAPTCHA reCAPTCHA
+    dd
+      p
+        | チェックボックスをクリックするだけで<br>
+        | 利用者が人間であることを確認するツール
+      img.no-border(src=require('./assets/reCAPTCHA.gif') alt='reCAPTCHA')
+      p
+        | マウスの動きなどから人間か機械かを判断するらしい<br>
+        | 画像／音声 CAPTCHA もオプションとして提供される
+  aside
+    +link('https://www.google.com/recaptcha/intro/invisible.html')(style='margin: 0;')
+      | reCAPTCHA: Easy on Humans, Hard on Bots
+    +link('https://support.google.com/recaptcha/answer/6175971')
+      | Accessibility - reCAPTCHA Help
+
+section.text-center(style='font-size: 125%;')
+  h6 アクセシビリティチェックツール
+
+section
+  h6 アクセシビリティチェックツール
+  dl
+    dt miChecker （エムアイチェッカー）
+    dd
+      | JIS X 8341-3:2016 (== WCAG 2.0) に基づく<br>
+      | ウェブアクセシビリティ対応の取組を支援するために<br>
+      | 総務省が開発
+      aside: +link('http://www.soumu.go.jp/main_sosiki/joho_tsusin/b_free/michecker.html')(style='font-size: 66%;')
+        | 総務省｜情報バリアフリー環境の整備｜みんなのアクセシビリティ評価ツール：<br>
+        | miChecker (エムアイチェッカー)Ver.2.0
+
+section.text-center
+  h6 時間があったら miChecker のデモします
+
+section.text-center
+  h6 インクルーシブデザインについて
+
+section
+  h6 インクルーシブデザインについて
+  article(style='font-size: 75%;')
+    p
+      | 最近『インクルーシブデザイン』という言葉を目にします。
+    p
+      | 『アクセシブル』も『ユニバーサル』も『インクルーシブ』も<br>
+      | 「多様な利用者に配慮する」という文脈を形成する意味で<br>
+      | 同じように利用されます。
+    p
+      | が、『インクルーシブデザイン』という言葉を選ぶときは<br>
+      | 「障がい者や高齢者を巻き込んで<strong class="strong-color">一緒にデザインする</strong>」<br>
+      | という意味を<span class="strong-color">込めたり込めなかったり</span>する点に留意が必要です。
+
+section
+  +link('http://inclusivedesignprinciples.org/ja/')(style='font-size: 90%;')
+    | インクルーシブデザインの原則<br>
+    | （「Inclusive Design Principles」日本語訳）
+    img.block(src=require('./assets/InclusiveDesignPrinciples.png') alt='インクルーシブデザインの原則ページキャプチャー')
+  p(style='font-size: 66%;') ↑ とても読みやすいアクセシビリティガイドラインになっていてオススメ
+
+section(style='font-size: 75%;')
+  h6 参考文献
+  div(style='font-size: 75%;')
+    +link('http://barrierfree.nict.go.jp/accessibility/proof/report/blind/index.html')
+      | 視覚障害者のインターネット利用特性と問題分析：みんなのウェブ
+    +link('http://dspace.lib.niigata-u.ac.jp/dspace/handle/10191/27807')
+      | 視覚障害者の携帯電話・スマートフォン・タブレット・パソコン利用状況調査2013: 新潟大学学術リポジトリ Nuar
+    +link('http://weba11y.jp/')
+      | エー イレブン ワイ［WebA11y.jp］
+    +link('https://www.w3.org/WAI/gettingstarted/tips/')
+      | ［英語］Tips for Getting Started &bull; WAI
+
+section.text-center
+  | 豆知識で終わらせず実践しましょう<br>
+  | （特に自分）
