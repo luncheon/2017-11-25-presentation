@@ -58,7 +58,7 @@ section.text-center(style='font-size: 125%;')
 
 section
   p(style='font-size: 75%; margin: 0;') ちなみにどこかで見たような 5 段階評価表があったりもします
-  img(src=require('./assets/ウェブアクセシビリティ取組確認・評価表.png') alt='ウェブアクセシビリティ取組確認・評価表のエクセルシート画面キャプチャー' style='margin: 0;')
+  img.block(src=require('./assets/ウェブアクセシビリティ取組確認・評価表.png') alt='ウェブアクセシビリティ取組確認・評価表のエクセルシート画面キャプチャー' style='margin: 0;')
   aside: +link('http://www.soumu.go.jp/main_sosiki/joho_tsusin/b_free/guideline.html')(style='margin: 0;')
     | 総務省｜情報バリアフリー環境の整備｜みんなの公共サイト運用ガイドライン（2016年版）
 
@@ -151,7 +151,7 @@ section
 section
   h6(style='margin: 0;') もっとほしいひとへ
   +link('https://waic.jp/docs/WCAG20/Overview.html')(style='font-size: 75%;')
-    img(src=require('./assets/WCAG20.png') alt='WCAG ヘッダーのキャプチャー')
+    img.block(src=require('./assets/WCAG20.png') alt='WCAG ヘッダーのキャプチャー')
     | Web Content Accessibility Guidelines (WCAG) 2.0 ［日本語訳］
   aside(style='font-size: 60%; margin-top: 1em;'): p
     | WCAG を日本語でどんな風に発音するかは不明<br>
@@ -212,8 +212,9 @@ section
     | #{'</div>'}
 
 section
-  p(style='font-size: 80%;') role 属性や aria-* 属性を規定する W3C 勧告<br>
-  h6
+  p(style='font-size: 75%;') role 属性や aria-* 属性を規定する W3C 勧告<br>
+  +link('https://momdo.github.io/wai-aria-1.1/')(style='font-size: 80%;')
+    img.block(src=require('./assets/WAI-ARIA.png') alt='WAI-ARIA ヘッダーのキャプチャー' style='margin-bottom: .5em;')
     ruby
       | WAI
       rt ウェイ
@@ -222,24 +223,29 @@ section
       | ARIA
       rt アリア
   aside(style='font-size: 60%; margin-top: 1em;'): p
-    | ARIA の発音は英語では「あ～りあ」みたいな感じ<br>
-    | （AR の音は argument の ar と同じ）<br>
+    | ARIA の発音は英語では「あ～りあ」（AR の音は argument の ar と同じ）<br>
     | でもカタカナ語では「アリア」とするのが一般的みたい
 
 section
-  | [todo]
   h6 WAI-ARIA
-  p
-    | WAI-ARIA のベストプラクティスは<br>
-    | 可能な限り WAI-ARIA を使わないこと
+  article(style='font-size: 90%;')
+    p
+      | 要素にロール、ステート、プロパティを<br>
+      | 付与するための属性の仕様定義
+    p
+      | WAI-ARIA のベストプラクティスは<br>
+      | 可能な限り WAI-ARIA を使わないこと
 
 section
-  | [todo]
   p WAI-ARIA が規定する role （一部）
+  | [todo]
+  aside: +link('https://momdo.github.io/wai-aria-1.1/#role_definitions')
 
 section
-  | [todo]
   p WAI-ARIA が規定する aria 属性（一部）
+  | [todo]
+  aside: +link('https://momdo.github.io/wai-aria-1.1/#state_prop_def')
+    | 6.6. ステートおよびプロパティの定義（すべてのaria-*属性）
 
 section.text-center(style='font-size: 125%;')
   h6 覚えきれません
@@ -270,7 +276,7 @@ section
       p
         | 歪んだ文字画像を表示して文字に起こさせることで<br>
         | 利用者が人間であることを確認するツール
-      img.no-border(src=require('./assets/CAPTCHA.jpg') alt='CAPTCHA')
+      img.block.no-border(src=require('./assets/CAPTCHA.jpg') alt='CAPTCHA')
       p
         | 画像の代わりに音声を文字に起こす CAPTCHA もある<br>
       p
@@ -286,7 +292,7 @@ section
       p
         | チェックボックスをクリックするだけで<br>
         | 利用者が人間であることを確認するツール
-      img.no-border(src=require('./assets/reCAPTCHA.gif') alt='reCAPTCHA')
+      img.block.no-border(src=require('./assets/reCAPTCHA.gif') alt='reCAPTCHA')
       p
         | マウスの動きなどから人間か機械かを判断するらしい<br>
         | 画像／音声 CAPTCHA もオプションとして提供される
