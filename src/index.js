@@ -5,6 +5,9 @@ import Reveal from 'reveal.js'
 import 'reveal.js/css/reveal.css'
 import 'reveal.js/css/theme/black.css'
 
+import './assets/tabs.css'
+import './assets/tabs.js'
+
 import 'mdi/css/materialdesignicons.css'
 import './style.styl'
 

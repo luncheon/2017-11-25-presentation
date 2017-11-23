@@ -3,7 +3,6 @@ mixin link(href)
     p(style='color: white; margin: 0;')
       block
     p(style='margin: 0;')= href
-    
 
 section
   p.text-center(style='font-size: 120%;')
@@ -32,35 +31,35 @@ section
 //-   aside: +link('http://www.mhlw.go.jp/stf/shingi/other-syougai.html?tid=404284', 'font-size: 50%; margin-top: 5%; text-align: left;')
 //-     | 2017 年に厚生労働省で「視覚障害の認定基準に関する検討会」が開催されています
 
-section.text-center(style='font-size: 125%;')
-  h6
-    | 障がいのある方への<br>
-    strong.strong-color 合理的配慮
-    | が求められています。
+//- section.text-center(style='font-size: 125%;')
+//-   h6
+//-     | 障がいのある方への<br>
+//-     strong.strong-color 合理的配慮
+//-     | が求められています。
 
-section
-  p
-    | 2016年4月1日<br>
-    | 障害を理由とする差別の解消の推進に関する法律（障害者差別解消法）が施行されました。
-  div(style='margin-top: 5%; font-size: 75%;')
-    p 概要
-    ol
-      li 何人も、障害者に対して、障害を理由として、差別することその他の権利利益を侵害する行為をしてはならない。
-      li 社会的障壁の除去は、それを必要としている障害者が現に存し、かつ、その実施に伴う負担が過重でないときは、
-        span.strong-color それを怠ることによつて前項の規定に違反することとならないよう、その実施について必要かつ合理的な配慮がされなければならない。
-  aside: +link('http://www8.cao.go.jp/shougai/suishin/sabekai.html')(style='font-size: 50%; margin-top: 5%;')
-    | 障害を理由とする差別の解消の推進 - 内閣府
+//- section
+//-   p
+//-     | 2016年4月1日<br>
+//-     | 障害を理由とする差別の解消の推進に関する法律（障害者差別解消法）が施行されました。
+//-   div(style='margin-top: 5%; font-size: 75%;')
+//-     p 概要
+//-     ol
+//-       li 何人も、障害者に対して、障害を理由として、差別することその他の権利利益を侵害する行為をしてはならない。
+//-       li 社会的障壁の除去は、それを必要としている障害者が現に存し、かつ、その実施に伴う負担が過重でないときは、
+//-         span.strong-color それを怠ることによつて前項の規定に違反することとならないよう、その実施について必要かつ合理的な配慮がされなければならない。
+//-   aside: +link('http://www8.cao.go.jp/shougai/suishin/sabekai.html')(style='font-size: 50%; margin-top: 5%;')
+//-     | 障害を理由とする差別の解消の推進 - 内閣府
 
-section.text-center(style='font-size: 125%;')
-  p
-    | よく分かりませんが<br>
-    | 合理的な配慮が要るみたいです。
+//- section.text-center(style='font-size: 125%;')
+//-   p
+//-     | よく分かりませんが<br>
+//-     | 合理的な配慮が要るみたいです。
 
-section
-  p(style='font-size: 75%; margin: 0;') ちなみにどこかで見たような 5 段階評価表があったりもします
-  img.block(src=require('./assets/ウェブアクセシビリティ取組確認・評価表.png') alt='ウェブアクセシビリティ取組確認・評価表のエクセルシート画面キャプチャー' style='margin: 0;')
-  aside: +link('http://www.soumu.go.jp/main_sosiki/joho_tsusin/b_free/guideline.html')(style='margin: 0;')
-    | 総務省｜情報バリアフリー環境の整備｜みんなの公共サイト運用ガイドライン（2016年版）
+//- section
+//-   p(style='font-size: 75%; margin: 0;') ちなみにどこかで見たような 5 段階評価表があったりもします
+//-   img.block(src=require('./assets/ウェブアクセシビリティ取組確認・評価表.png') alt='ウェブアクセシビリティ取組確認・評価表のエクセルシート画面キャプチャー' style='margin: 0;')
+//-   aside: +link('http://www.soumu.go.jp/main_sosiki/joho_tsusin/b_free/guideline.html')(style='margin: 0;')
+//-     | 総務省｜情報バリアフリー環境の整備｜みんなの公共サイト運用ガイドライン（2016年版）
 
 section.text-center(style='font-size: 125%;')
   h6 視覚障がい者の Web 利用方法
@@ -89,14 +88,14 @@ section
   h6 音声読み上げソフト
   dl
     dt スクリーンリーダー
-    dd(style='font-size: 70%;'): table.width-fill: tbody
+    dd(style='font-size: 66%;'): table.width-fill.nowrap: tbody
       tr
         td PC-Talker
-        td <span style="visibility: hidden;">1</span>41,040 円 (税込)
+        td 41,040 円（税込）
         td 国内シェア 85.3%
       tr
         td JAWS
-        td 153,360 円 (税込)
+        td 153,360 円（税込）
         td
       tr
         td NVDA
@@ -111,22 +110,24 @@ section
         td macOS, iOS 標準付属
         td
     dt 音声ブラウザー
-    dd(style='font-size: 70%;'): table.width-fill: tbody
+    dd(style='font-size: 66%;'): table.width-fill.nowrap: tbody
       tr
-        td NetReader
-        td 30,240円 (税込)
+        td NetReaderⅡ
+        td 30,240円（税込）
         td 要 PC-Talker
       tr(style='text-decoration: line-through;')
         td IBM Home Page Reader
         td 販売終了
         td IE 6 まで
       tr
-        td ALTAIR (アルティア)
+        td: ruby
+          | ALTAIR
+          rt アルティア
         td 無料
         td DL リンク切れ...
 
 section.text-center
-  h6 ［デモ］ 音声の読み上げを聴いてみましょう
+  h6 ［デモ］ 音声の読み上げを聴いてみよう
   aside(style='font-size: 60%;') ※ 発表者が使い慣れていない＆あがり症のため、まごつきますがご了承ください。
 
 section.text-center(style='font-size: 125%;')
@@ -177,39 +178,26 @@ section
   dl
     dt こんなときどうしよう
     dd: ol
-      li アイコンボタンの意味を音声で説明したいけど画面には説明を出したくない
+      li アイコンボタンの用途を読み上げてほしいけど画面には出したくない
       li 見た目を派手にするためだけの要素を読み飛ばしてほしい
       li 「タブ」など HTML タグにない意味を要素に与えたい
 
 section
-  | [todo]
-  h6 1. アイコンボタンの意味を音声で説明したいけど画面には説明を出したくない
-  pre: code
-    | #{`<button\n  aria-label="お気に入りに追加"\n  aria-describedby="favorite-button-description"\n>`}
-    | #{'  <i class="mdi mdi-star"></i>'}
-    | #{'</button>'}
-    | #{'<p id="favorite-button-description" style="display: none;">'}
-    | #{'  選択されている項目をお気に入りに追加します'}
-    | #{'</p>'}
-  button.icon-button(aria-label="お気に入りに追加" aria-describedby="favorite-button-description"): i.mdi.mdi-star
-  p#favorite-button-description(style="display: none;") 選択されている項目をお気に入りに追加します
+  ol: li アイコンボタンの用途を読み上げてほしいけど画面には出したくない
+  pre: code= require('raw-loader!./assets/sample-code--icon-button.html')
+  .sample!= require('raw-loader!./assets/sample-code--icon-button.html')
 
 section
-  | [todo]
-  h6 2. 見た目を派手にするためだけの要素を読み上げてほしくない
-  pre: code
-    | #{'<div aria-hidden>この要素は読み上げられません</div>'}
-  div(aria-hidden) この要素は読み上げられません
+  ol(start=2): li 見た目を派手にするためだけの要素を読み上げてほしくない
+  pre: code= require('raw-loader!./assets/sample-code--aria-hidden.html')
+  .sample!= require('raw-loader!./assets/sample-code--aria-hidden.html')
 
 section
-  | [todo]
-  h6 3. 「タブ」など HTML タグにない意味を要素に与えたい
-  pre: code
-    | #{'<div role="tablist">'}
-    | #{'  <input name="selectedTab" type="radio" role="tab">タブ１</input>'}
-    | #{'  <input name="selectedTab" type="radio" role="tab">タブ２</input>'}
-    | #{'  <input name="selectedTab" type="radio" role="tab">タブ３</input>'}
-    | #{'</div>'}
+  ol(start=3): li 「タブ」など HTML タグにない意味を要素に与えたい
+  section
+    pre: code= require('raw-loader!./assets/sample-code--tabs.html')
+  section
+    .sample(style='font-size: 80%;'): .tabs!= require('raw-loader!./assets/sample-code--tabs.html')
 
 section
   p(style='font-size: 75%;') role 属性や aria-* 属性を規定する W3C 勧告<br>
@@ -230,34 +218,37 @@ section
   h6 WAI-ARIA
   article(style='font-size: 90%;')
     p
-      | 要素にロール、ステート、プロパティを<br>
+      | 要素に<strong class="strong-color">ロール</strong>、<strong class="strong-color">ステート</strong>、<strong class="strong-color">プロパティ</strong>を<br>
       | 付与するための属性の仕様定義
     p
       | WAI-ARIA のベストプラクティスは<br>
-      | 可能な限り WAI-ARIA を使わないこと
+      | なるべく WAI-ARIA を使わないこと
 
 section
-  p WAI-ARIA が規定する role （一部）
-  | [todo]
-  aside: +link('https://momdo.github.io/wai-aria-1.1/#role_definitions')
+  h6.text-center WAI-ARIA 属性がたくさんあって覚えきれない
+  aside
+    +link('https://momdo.github.io/wai-aria-1.1/#role_definitions')
+      | 5.4 ロールの定義
+    +link('https://momdo.github.io/wai-aria-1.1/#state_prop_def')
+      | 6.6. ステートおよびプロパティの定義（すべてのaria-*属性）
 
 section
-  p WAI-ARIA が規定する aria 属性（一部）
-  | [todo]
-  aside: +link('https://momdo.github.io/wai-aria-1.1/#state_prop_def')
-    | 6.6. ステートおよびプロパティの定義（すべてのaria-*属性）
-
-section.text-center(style='font-size: 125%;')
-  h6 覚えきれません
-
-section
-  h6 覚えきれません
-  ul.list-style-caret
-    li コンポーネントライブラリを選ぶ
-    li メジャーどころだけ覚える
-  p(style='font-size: 75%; margin-top: 1em;')
-    | なるべく使わない方が良いものなので<br>
-    | 必死に覚えなくても良いと思います。個人的には。
+  h6 WAI-ARIA 属性がたくさんあって覚えきれない
+  ul(style='font-size: 75%;')
+    li(style='margin-bottom: 1em;')
+      p
+        | WAI-ARIA Authoring Practices に WAI-ARIA 属性の<br>
+        | 使い方と具体例があるのでマネすると話が早い<br>
+        | （先ほどのタブの例はここから拝借した）
+      +link('https://www.w3.org/TR/wai-aria-practices/')(style='text-align: right; font-size: 90%;')
+        | WAI-ARIA Authoring Practices 1.1
+    li(style='margin-bottom: 1em;'): p
+      | WAI-ARIA 属性を勝手に付与してくれるような<br>
+      | コンポーネントライブラリを選べば話が超早い<br>
+      | jQuery UI や Material UI (React)、 Element (Vue.js) など
+    li: p
+      | そもそもなるべく使わない方が良いものなので<br>
+      | 必死に覚えなくていいと思う。個人的には。
 
 section
   h6 視覚障がい者を意識した Web コンテンツ
@@ -318,7 +309,7 @@ section
         | miChecker (エムアイチェッカー)Ver.2.0
 
 section.text-center
-  h6 時間があったら miChecker のデモします
+  h6 時間があったら miChecker のデモ
 
 section.text-center
   h6 インクルーシブデザインについて
@@ -327,15 +318,15 @@ section
   h6 インクルーシブデザインについて
   article(style='font-size: 75%;')
     p
-      | 最近『インクルーシブデザイン』という言葉を目にします。
+      | 最近『インクルーシブデザイン』という言葉を目にする
     p
       | 『アクセシブル』も『ユニバーサル』も『インクルーシブ』も<br>
-      | 「多様な利用者に配慮する」という文脈を形成する意味で<br>
-      | 同じように利用されます。
+      | 「多様な利用者・環境に配慮する」という文脈を形成する意味で<br>
+      | 同じように利用される
     p
       | が、『インクルーシブデザイン』という言葉を選ぶときは<br>
       | 「障がい者や高齢者を巻き込んで<strong class="strong-color">一緒にデザインする</strong>」<br>
-      | という意味を<span class="strong-color">込めたり込めなかったり</span>する点に留意が必要です。
+      | という意味を<span class="strong-color">込めたり込めなかったり</span>する点に留意が必要
 
 section
   +link('http://inclusivedesignprinciples.org/ja/')(style='font-size: 90%;')
@@ -351,10 +342,14 @@ section(style='font-size: 75%;')
       | 視覚障害者のインターネット利用特性と問題分析：みんなのウェブ
     +link('http://dspace.lib.niigata-u.ac.jp/dspace/handle/10191/27807')
       | 視覚障害者の携帯電話・スマートフォン・タブレット・パソコン利用状況調査2013: 新潟大学学術リポジトリ Nuar
+    +link('https://king.mineo.jp/magazines/special/387')
+      | 盲目のiPhoneユーザーに聞いた、視覚を使わない驚きのスマホ操作術 | スタッフブログ | マイネ王
+    +link('https://qiita.com/magi1125/items/2c2e9d78c6db2724a826')
+      | モバイルアクセシビリティ：WCAG 2.0やその他W3C/WAIのガイドラインのモバイルへの適用 - Qiita
     +link('http://weba11y.jp/')
       | エー イレブン ワイ［WebA11y.jp］
     +link('https://www.w3.org/WAI/gettingstarted/tips/')
-      | ［英語］Tips for Getting Started &bull; WAI
+      | Tips for Getting Started &bull; WAI
 
 section.text-center
   | 豆知識で終わらせず実践しましょう<br>

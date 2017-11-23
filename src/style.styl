@@ -41,12 +41,16 @@ a[href]
 .text-right
   text-align right
 
+.nowrap
+  white-space nowrap
+
 .link-text
   .reveal &
     font-family 'Segoe UI',sans-serif
   aside &
     text-align right
     font-size 50%
+    margin-top .25em
     &:first-child
       margin-top 5%
 
@@ -90,6 +94,9 @@ a[href]
     margin 0
     background-color transparent
 
+  pre > code
+    max-height none
+
   .controls button
     outline none
     opacity 0
@@ -118,17 +125,27 @@ a[href]
       content '\025B8'
       margin-right .5em
 
-.icon-button
-  width 2em
-  height 2em
-  font-size 1.5em
-  border-radius 50%
-  color inherit
-  background-color transparent
-  border none
-  outline none
-  padding 0
-  transition background-color .3s ease-in-out
+  .sample
+    width 90%
+    margin auto
+    padding .25em .5em
+    color black
+    background-color white
 
-  &:hover
-    background-color rgba(255,255,255,.1)
+    p
+      margin 0
+
+    .icon-button
+      width 2em
+      height 2em
+      font-size 1.5em
+      border-radius 50%
+      color inherit
+      background-color transparent
+      border none
+      outline none
+      padding 0
+      transition background-color .3s ease-in-out
+
+      &:hover
+        background-color rgba(0,0,0,.2)
