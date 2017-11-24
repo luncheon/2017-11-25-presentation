@@ -1,9 +1,9 @@
 @font-face
   font-family 'GenJyuuGothicX'
-  src url(./assets/GenJyuuGothicX-Medium.woff2)
+  src url(./assets/fonts/GenJyuuGothicX-Medium.woff2)
 
 @font-face
-  src url(./assets/ArbutusSlab.woff)
+  src url(./assets/fonts/ArbutusSlab.woff)
   font-family 'ArbutusSlab'
 
 :root
@@ -46,7 +46,7 @@ a[href]
 
 .link-text
   .reveal &
-    font-family 'Segoe UI',sans-serif
+    font-family Helvetica,Arial,sans-serif
   aside &
     text-align right
     font-size 50%
@@ -61,9 +61,11 @@ a[href]
     font-family inherit
     text-transform none
 
-  h6
+  h5, h6
     font-weight normal
     margin-bottom 1em
+  h5
+    font-size 125%
 
   p
     margin .5em 0
@@ -89,6 +91,9 @@ a[href]
   blockquote
     width auto
     font-style normal
+    padding .25em .5em
+    p:first-child, p:last-child
+      display block
 
   section img
     margin 0
@@ -96,6 +101,14 @@ a[href]
 
   pre > code
     max-height none
+  pre.pre-inline
+    display inline-block
+    width auto
+    margin 0 .5em
+    font-size 75%
+    vertical-align bottom
+    > code
+      display inline-block
 
   .controls button
     outline none
@@ -118,22 +131,18 @@ a[href]
   img.no-border
     border: none;
 
-  ul.list-style-caret
-    list-style-type none
-    margin-left .5em
-    > li::before
-      content '\025B8'
-      margin-right .5em
-
   .sample
     width 90%
-    margin auto
+    margin .5em auto
     padding .25em .5em
     color black
     background-color white
 
     p
       margin 0
+
+    [role="tabpanel"]
+      padding .5em 1em
 
     .icon-button
       width 2em

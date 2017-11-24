@@ -1,7 +1,7 @@
 {
   "name": "2017-11-25-presentation",
   "version": "0.0.0",
-  "description": "［社内発表資料］視覚障がい者のための Web アクセシビリティ入門以前",
+  "description": "［社内発表資料］ 視覚障がい者向け Web アクセシビリティ入門以前",
   "repository": "luncheon/2017-11-25-presentation",
   "scripts": {
     "rebuild": "npm run clean && npm run build",

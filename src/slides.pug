@@ -14,55 +14,46 @@ section
 
 section
   h1.text-center(style='font-size: 150%; line-height: 1.4;')
-    | 視覚障がい者のための<br>
+    | 視覚障がい者向け<br>
     | Web アクセシビリティ<br>
     | 入門以前
   div.text-right(style='margin-top: 10%;')
     | 2017年11月25日
 
-//- section
-//-   p(style='margin-top: 5%; font-size: 85%;')
-//-     | 日本の視覚障がい者数は約 34 万人<br>
-//-     | （2015 年末時点の手帳交付者数）
-//-   p(style='margin-top: 5%; font-size: 85%;')
-//-     | 日本の視覚障がい認定基準は米国等と比べると厳しく<br>
-//-     | 米国基準に照らせば約 164 万人になるとの試算も<br>
-//-     | （2007 年時点／日本眼科医会）
-//-   aside: +link('http://www.mhlw.go.jp/stf/shingi/other-syougai.html?tid=404284', 'font-size: 50%; margin-top: 5%; text-align: left;')
-//-     | 2017 年に厚生労働省で「視覚障害の認定基準に関する検討会」が開催されています
+section.text-center
+  h5 アクセシビリティとは
 
-//- section.text-center(style='font-size: 125%;')
-//-   h6
-//-     | 障がいのある方への<br>
-//-     strong.strong-color 合理的配慮
-//-     | が求められています。
+section
+  h6(style='margin-bottom: 0;') アクセシビリティとは (accessibility; a11y)
+  article
+    p アクセスのしやすさ
+    ul(style='font-size: 80%;')
+      li 表示が速い方がアクセスしやすい
+      li レスポンシブ対応すればケータイからアクセスしやすい
+      li 多言語対応すれば他言語利用者がアクセスしやすい
+      li ServiceWorker を使えばオフラインでもアクセスできる
+      li などなど...
 
-//- section
-//-   p
-//-     | 2016年4月1日<br>
-//-     | 障害を理由とする差別の解消の推進に関する法律（障害者差別解消法）が施行されました。
-//-   div(style='margin-top: 5%; font-size: 75%;')
-//-     p 概要
-//-     ol
-//-       li 何人も、障害者に対して、障害を理由として、差別することその他の権利利益を侵害する行為をしてはならない。
-//-       li 社会的障壁の除去は、それを必要としている障害者が現に存し、かつ、その実施に伴う負担が過重でないときは、
-//-         span.strong-color それを怠ることによつて前項の規定に違反することとならないよう、その実施について必要かつ合理的な配慮がされなければならない。
-//-   aside: +link('http://www8.cao.go.jp/shougai/suishin/sabekai.html')(style='font-size: 50%; margin-top: 5%;')
-//-     | 障害を理由とする差別の解消の推進 - 内閣府
+section
+  h6(style='margin-bottom: .5em;') アクセシビリティとは
+  article(style='font-size: 75%;')
+    p
+      | W3C <span style="font-size: 80%;">(World Wide Web Consortium)</span> でアクセシビリティ関連の<br>
+      | 標準化を行う組織 WAI <span style="font-size: 80%;">(Web Accessibility Initiative)</span> では<br>
+      | Web アクセシビリティを<strong class="strong-color">障がい者が Web を利用できること</strong><br>
+      | と説明している
+    blockquote
+      | Web accessibility means that people with disabilities can use the Web.
+      aside: +link('https://www.w3.org/WAI/intro/accessibility.php')(style='font-size: 80%; margin-top: 1em;')
+        | Introduction to Web Accessibility | Web Accessibility Initiative (WAI) | W3C
+    p(style='margin-top: 1em;')
+      | この狭義のアクセシビリティには反対意見も（強く）あり、<br>
+      | 誰でもどんな環境でもアクセスしやすいという意味で使う人もいる
+    p(style='margin-top: 1em;')
+      | 当発表では「視覚障がい者向けのアクセシビリティ」だけを扱う
 
-//- section.text-center(style='font-size: 125%;')
-//-   p
-//-     | よく分かりませんが<br>
-//-     | 合理的な配慮が要るみたいです。
-
-//- section
-//-   p(style='font-size: 75%; margin: 0;') ちなみにどこかで見たような 5 段階評価表があったりもします
-//-   img.block(src=require('./assets/ウェブアクセシビリティ取組確認・評価表.png') alt='ウェブアクセシビリティ取組確認・評価表のエクセルシート画面キャプチャー' style='margin: 0;')
-//-   aside: +link('http://www.soumu.go.jp/main_sosiki/joho_tsusin/b_free/guideline.html')(style='margin: 0;')
-//-     | 総務省｜情報バリアフリー環境の整備｜みんなの公共サイト運用ガイドライン（2016年版）
-
-section.text-center(style='font-size: 125%;')
-  h6 視覚障がい者の Web 利用方法
+section.text-center
+  h5 視覚障がい者の Web 利用方法
 
 section
   h6 視覚障がい者の Web 利用方法
@@ -130,8 +121,8 @@ section.text-center
   h6 ［デモ］ 音声の読み上げを聴いてみよう
   aside(style='font-size: 60%;') ※ 発表者が使い慣れていない＆あがり症のため、まごつきますがご了承ください。
 
-section.text-center(style='font-size: 125%;')
-  h6 視覚障がい者を意識したマークアップ
+section.text-center
+  h5 視覚障がい者を意識したマークアップ
 
 section
   h6 視覚障がい者を意識したマークアップ
@@ -152,7 +143,7 @@ section
 section
   h6(style='margin: 0;') もっとほしいひとへ
   +link('https://waic.jp/docs/WCAG20/Overview.html')(style='font-size: 75%;')
-    img.block(src=require('./assets/WCAG20.png') alt='WCAG ヘッダーのキャプチャー')
+    img.block(src=require('./assets/images/WCAG20.png') alt='WCAG ヘッダーのキャプチャー')
     | Web Content Accessibility Guidelines (WCAG) 2.0 ［日本語訳］
   aside(style='font-size: 60%; margin-top: 1em;'): p
     | WCAG を日本語でどんな風に発音するかは不明<br>
@@ -178,31 +169,31 @@ section
   dl
     dt こんなときどうしよう
     dd: ol
-      li アイコンボタンの用途を読み上げてほしいけど画面には出したくない
-      li 見た目を派手にするためだけの要素を読み飛ばしてほしい
+      li アイコンボタンの機能を読み上げてほしい
+      li にぎやかしのためだけの要素を読み飛ばしてほしい
       li 「タブ」など HTML タグにない意味を要素に与えたい
 
 section
-  ol: li アイコンボタンの用途を読み上げてほしいけど画面には出したくない
-  pre: code= require('raw-loader!./assets/sample-code--icon-button.html')
-  .sample!= require('raw-loader!./assets/sample-code--icon-button.html')
+  ol: li アイコンボタンの機能を読み上げてほしい
+  pre: code= require('raw-loader!./assets/sample-codes/icon-button.html')
+  .sample!= require('raw-loader!./assets/sample-codes/icon-button.html')
 
 section
-  ol(start=2): li 見た目を派手にするためだけの要素を読み上げてほしくない
-  pre: code= require('raw-loader!./assets/sample-code--aria-hidden.html')
-  .sample!= require('raw-loader!./assets/sample-code--aria-hidden.html')
+  ol(start=2): li にぎやかしのためだけの要素を読み上げてほしくない
+  pre: code= require('raw-loader!./assets/sample-codes/aria-hidden.html')
+  .sample!= require('raw-loader!./assets/sample-codes/aria-hidden.html')
 
 section
   ol(start=3): li 「タブ」など HTML タグにない意味を要素に与えたい
-  section
-    pre: code= require('raw-loader!./assets/sample-code--tabs.html')
-  section
-    .sample(style='font-size: 80%;'): .tabs!= require('raw-loader!./assets/sample-code--tabs.html')
+  pre: code= require('raw-loader!./assets/sample-codes/tabs.html')
+
+section
+  ol(start=3): li 「タブ」など HTML タグにない意味を要素に与えたい
+  .sample(style='font-size: 80%;'): .tabs(onkeydown='event.stopPropagation()')!= require('raw-loader!./assets/sample-codes/tabs.html')
 
 section
   p(style='font-size: 75%;') role 属性や aria-* 属性を規定する W3C 勧告<br>
   +link('https://momdo.github.io/wai-aria-1.1/')(style='font-size: 80%;')
-    img.block(src=require('./assets/WAI-ARIA.png') alt='WAI-ARIA ヘッダーのキャプチャー' style='margin-bottom: .5em;')
     ruby
       | WAI
       rt ウェイ
@@ -210,6 +201,8 @@ section
       rt
       | ARIA
       rt アリア
+    span(style='font-size: 75%; margin-left: 1em;') (Accessible Rich Internet Applications)
+    img.block(src=require('./assets/images/WAI-ARIA.png') alt='WAI-ARIA ヘッダーのキャプチャー')
   aside(style='font-size: 60%; margin-top: 1em;'): p
     | ARIA の発音は英語では「あ～りあ」（AR の音は argument の ar と同じ）<br>
     | でもカタカナ語では「アリア」とするのが一般的みたい
@@ -220,35 +213,44 @@ section
     p
       | 要素に<strong class="strong-color">ロール</strong>、<strong class="strong-color">ステート</strong>、<strong class="strong-color">プロパティ</strong>を<br>
       | 付与するための属性の仕様定義
-    p
-      | WAI-ARIA のベストプラクティスは<br>
-      | なるべく WAI-ARIA を使わないこと
+    p(style='margin-top: 1em;')
+      | WAI-ARIA の使用ルールの 1 つは<br>
+      strong.strong-color なるべく WAI-ARIA 属性を使わず<br>
+      | HTML ネイティブの意味を使うこと
+    div
+      | （
+      pre.pre-inline(style='margin-left: 0;'): code
+        | &lt;div role="progressbar"&gt;
+      | より
+      pre.pre-inline: code
+        | &lt;progress&gt;
+      | を使うこと）
 
 section
   h6.text-center WAI-ARIA 属性がたくさんあって覚えきれない
   aside
-    +link('https://momdo.github.io/wai-aria-1.1/#role_definitions')
+    +link('https://momdo.github.io/wai-aria-1.1/#role_definitions')(style='font-size: 75%;')
       | 5.4 ロールの定義
-    +link('https://momdo.github.io/wai-aria-1.1/#state_prop_def')
+    +link('https://momdo.github.io/wai-aria-1.1/#state_prop_def')(style='font-size: 75%;')
       | 6.6. ステートおよびプロパティの定義（すべてのaria-*属性）
 
 section
   h6 WAI-ARIA 属性がたくさんあって覚えきれない
   ul(style='font-size: 75%;')
     li(style='margin-bottom: 1em;')
-      p
-        | WAI-ARIA Authoring Practices に WAI-ARIA 属性の<br>
-        | 使い方と具体例があるのでマネすると話が早い<br>
-        | （先ほどのタブの例はここから拝借した）
+      | WAI-ARIA Authoring Practices に WAI-ARIA 属性の<br>
+      | 使い方と具体例があるのでマネすると話が早い<br>
+      | （先ほどのタブの例はここから拝借した）
       +link('https://www.w3.org/TR/wai-aria-practices/')(style='text-align: right; font-size: 90%;')
         | WAI-ARIA Authoring Practices 1.1
-    li(style='margin-bottom: 1em;'): p
+    li(style='margin-bottom: 1em;')
       | WAI-ARIA 属性を勝手に付与してくれるような<br>
       | コンポーネントライブラリを選べば話が超早い<br>
-      | jQuery UI や Material UI (React)、 Element (Vue.js) など
-    li: p
+      | jQuery UI、Material UI (React)、Element (Vue.js) など
+    li
       | そもそもなるべく使わない方が良いものなので<br>
-      | 必死に覚えなくていいと思う。個人的には。
+      | 必死に覚えなくてもいいと思う<br>
+      | （HTML 5 のタグと属性を使いこなすのが先決）
 
 section
   h6 視覚障がい者を意識した Web コンテンツ
@@ -267,7 +269,7 @@ section
       p
         | 歪んだ文字画像を表示して文字に起こさせることで<br>
         | 利用者が人間であることを確認するツール
-      img.block.no-border(src=require('./assets/CAPTCHA.jpg') alt='CAPTCHA')
+      img.block.no-border(src=require('./assets/images/CAPTCHA.jpg') alt='CAPTCHA')
       p
         | 画像の代わりに音声を文字に起こす CAPTCHA もある<br>
       p
@@ -283,18 +285,18 @@ section
       p
         | チェックボックスをクリックするだけで<br>
         | 利用者が人間であることを確認するツール
-      img.block.no-border(src=require('./assets/reCAPTCHA.gif') alt='reCAPTCHA')
+      img.block.no-border(src=require('./assets/images/reCAPTCHA.gif') alt='reCAPTCHA')
       p
         | マウスの動きなどから人間か機械かを判断するらしい<br>
-        | 画像／音声 CAPTCHA もオプションとして提供される
+        | 音声 CAPTCHA もオプションとして提供される
   aside
     +link('https://www.google.com/recaptcha/intro/invisible.html')(style='margin: 0;')
       | reCAPTCHA: Easy on Humans, Hard on Bots
     +link('https://support.google.com/recaptcha/answer/6175971')
       | Accessibility - reCAPTCHA Help
 
-section.text-center(style='font-size: 125%;')
-  h6 アクセシビリティチェックツール
+section.text-center
+  h5 アクセシビリティチェックツール
 
 section
   h6 アクセシビリティチェックツール
@@ -308,8 +310,30 @@ section
         | 総務省｜情報バリアフリー環境の整備｜みんなのアクセシビリティ評価ツール：<br>
         | miChecker (エムアイチェッカー)Ver.2.0
 
-section.text-center
-  h6 時間があったら miChecker のデモ
+section
+  h6 miChecker やってみた
+  img(src=require('./assets/images/miChecker-result.png') alt='エムアイチェッカー実行結果画面キャプチャー')
+
+section
+  h6 miChecker 指摘例
+  ul(style='font-size: 70%;')
+    li 画像にalt属性がありません。代替テキストを設定してください。
+    li このHTML文書に空でないtitle要素を提供してください。
+    li 文書内で主に利用されている言語をlang属性を用いて明示してください。
+    li id 属性の値に重複があります。(fb-root)
+    li ページ内リンク "#top-top" は、読み上げ可能なテキストを持たないため、音声アクセスできません
+    li "本文へ移動"などのスキップリンクへの到達に83秒もかかります（スキップリンクの挿入位置を見直してください）
+    li 同一テキストの繰り返しがあります : "[導入事例]" ＆ "導入事例"
+    li フォントサイズは相対的な大きさで指定してください。(FONT-SIZE: 28px)
+    li フォーム・コントロールにlabel要素およびtitle属性が関連付けられていません。
+
+section
+  h6 miChecker 所感
+  ul(style='font-size: 80%;')
+    li 超手軽
+    li 指摘内容的にも 1 度は通しておきたい
+    li 総務省いい仕事しとる
+    li CI 用の CLI あるかな？（未調査）
 
 section.text-center
   h6 インクルーシブデザインについて
@@ -321,7 +345,7 @@ section
       | 最近『インクルーシブデザイン』という言葉を目にする
     p
       | 『アクセシブル』も『ユニバーサル』も『インクルーシブ』も<br>
-      | 「多様な利用者・環境に配慮する」という文脈を形成する意味で<br>
+      | 「多様な利用者・利用環境への配慮」という文脈を形成する意味で<br>
       | 同じように利用される
     p
       | が、『インクルーシブデザイン』という言葉を選ぶときは<br>
@@ -332,25 +356,100 @@ section
   +link('http://inclusivedesignprinciples.org/ja/')(style='font-size: 90%;')
     | インクルーシブデザインの原則<br>
     | （「Inclusive Design Principles」日本語訳）
-    img.block(src=require('./assets/InclusiveDesignPrinciples.png') alt='インクルーシブデザインの原則ページキャプチャー')
+    img.block(src=require('./assets/images/InclusiveDesignPrinciples.png') alt='インクルーシブデザインの原則ページキャプチャー')
   p(style='font-size: 66%;') ↑ とても読みやすいアクセシビリティガイドラインになっていてオススメ
 
-section(style='font-size: 75%;')
-  h6 参考文献
-  div(style='font-size: 75%;')
+section
+  h6(style='font-size: 75%;') 参考文献
+  div(style='font-size: 50%;')
     +link('http://barrierfree.nict.go.jp/accessibility/proof/report/blind/index.html')
       | 視覚障害者のインターネット利用特性と問題分析：みんなのウェブ
-    +link('http://dspace.lib.niigata-u.ac.jp/dspace/handle/10191/27807')
+    +link('http://dspace.lib.niigata-u.ac.jp/dspace/handle/10191/27807')(style='margin-top: .5em;')
       | 視覚障害者の携帯電話・スマートフォン・タブレット・パソコン利用状況調査2013: 新潟大学学術リポジトリ Nuar
-    +link('https://king.mineo.jp/magazines/special/387')
+    +link('https://king.mineo.jp/magazines/special/387')(style='margin-top: .5em;')
       | 盲目のiPhoneユーザーに聞いた、視覚を使わない驚きのスマホ操作術 | スタッフブログ | マイネ王
-    +link('https://qiita.com/magi1125/items/2c2e9d78c6db2724a826')
+    +link('https://qiita.com/magi1125/items/2c2e9d78c6db2724a826')(style='margin-top: .5em;')
       | モバイルアクセシビリティ：WCAG 2.0やその他W3C/WAIのガイドラインのモバイルへの適用 - Qiita
-    +link('http://weba11y.jp/')
+    +link('http://weba11y.jp/')(style='margin-top: .5em;')
       | エー イレブン ワイ［WebA11y.jp］
-    +link('https://www.w3.org/WAI/gettingstarted/tips/')
-      | Tips for Getting Started &bull; WAI
 
 section.text-center
   | 豆知識で終わらせず実践しましょう<br>
   | （特に自分）
+
+section.text-center
+  h5 余談
+
+section
+  h6 余談 1 視覚障がい者の人数と基準の見直し
+  article(style='font-size: 80%;')
+    p(style='margin-top: 1em;')
+      | 日本の視覚障がい者数は約 34 万人<br>
+      span(style='font-size: 90%;') （2015 年末時点の手帳交付者数）
+    p(style='margin-top: 1em;')
+      | 日本の視覚障がい認定基準は米国等と比べると厳しく<br>
+      | 米国基準に照らせば約 164 万人になるとの試算も<br>
+      span(style='font-size: 90%;') （2007 年時点／日本眼科医会）
+    +link('http://www.gankaikai.or.jp/press/20091115_socialcost.pdf')(style='text-align: right; font-size: 75%;')
+      | 視覚障害がもたらす社会損失額、8.8兆円!!
+    p(style='margin-top: 1em;')
+      | 認定基準の見直しが求められており 2017 年に厚生労働省で<br>
+      | 「視覚障害の認定基準に関する検討会」が開催されている
+    +link('http://www.mhlw.go.jp/stf/shingi/other-syougai.html?tid=404284')(style='text-align: right; font-size: 75%;')
+      | 視覚障害の認定基準に関する検討会 ｜厚生労働省
+
+section
+  h6 余談 2 障害者差別解消法について
+  article
+    p(style='font-size: 80%;')
+      | 2016年4月1日<br>
+      | 障害を理由とする差別の解消の推進に関する法律（障害者差別解消法）が施行されました。
+    dl
+      dt 概要
+      dd: ol
+        li 何人も、障害者に対して、障害を理由として、差別することその他の権利利益を侵害する行為をしてはならない。
+        li 社会的障壁の除去は、それを必要としている障害者が現に存し、かつ、その実施に伴う負担が過重でないときは、
+          span.strong-color それを怠ることによつて前項の規定に違反することとならないよう、その実施について必要かつ合理的な配慮がされなければならない。
+  aside: +link('http://www8.cao.go.jp/shougai/suishin/sabekai.html')(style='margin-top: 0;')
+    | 障害を理由とする差別の解消の推進 - 内閣府
+
+section
+  h6 余談 2 障害者差別解消法について
+  p(style='font-size: 75%; margin: 0;') ちなみにどこかで見たような 5 段階評価表があったりもします
+  img.block(src=require('./assets/images/ウェブアクセシビリティ取組確認・評価表.png') alt='ウェブアクセシビリティ取組確認・評価表のエクセルシート画面キャプチャー' style='margin: 0;')
+  aside: +link('http://www.soumu.go.jp/main_sosiki/joho_tsusin/b_free/guideline.html')(style='margin: 0;')
+    | 総務省｜情報バリアフリー環境の整備｜みんなの公共サイト運用ガイドライン（2016年版）
+
+section
+  h6 余談 3 「障害」「障碍」「障がい」論争について
+  article(style='font-size: 80%;')
+    p
+      | 戦後一般的だった「障害」「障害者」という表記に対して<br>
+      | 「害」という文字の印象が悪いから「障がい」表記にすると<br>
+      | 一部の地方公共団体が言い出した（2000年代前半頃～）
+
+section
+  h6 余談 3 「障害」「障碍」「障がい」論争について
+  article(style='font-size: 80%;')
+    p
+      | こういうのはだいたい言い出しっぺが悪い
+    p
+      | もともと誰も「障害」という表記に特別な印象を抱てないのに、印象が悪いという主張が現れるとそう見える人が現れる
+    p(style='margin-top: 1em;')
+      | handicapped は印象が悪いと言って impaired, invalid, disabled, challenged, disability, survivor など新しい言葉を割り当てては混乱と論争を巻き起こすが、<br>
+      | どんなシニフィアン（表現）を選んでもシニフィエ（意味）側が時間とともに偏見を含むようになっていくだけ<br>
+      | （その言葉を差別的な意味で使う人が現れる、あるいは差別的な意味で受け取る人が現れる）
+
+section
+  h6 余談 3 「障害」「障碍」「障がい」論争について
+  article(style='font-size: 80%;')
+    p
+      | 内閣府による表記検討結果資料を見ると<br>
+      | 歴史的変遷や各派閥の主張がまとまっていておもしろい
+    aside: +link('http://www8.cao.go.jp/shougai/suishin/kaikaku/s_kaigi/k_26/pdf/s2.pdf')(style='font-size: 75%; margin-top: .5em;')
+      | 「障害」の表記に関する検討結果について<br>
+      | 平成２２年１１月２２日 「障害」の表記に関する作業チーム
+    p(style='margin-top: 1em;')
+      | ちなみに<br>
+      | 当発表では基本的に「障がい」表記とした（引用箇所を除く）<br>
+      | が、深い理由はない（十分な検討ができていない）
