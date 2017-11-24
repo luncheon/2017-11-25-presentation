@@ -8,7 +8,7 @@ section
   p.text-center(style='font-size: 120%;')
     | 16～69歳の視覚障がい者の <span class="strong-color"><strong style="font-size: 150%;">91.7</strong>%</span> が<br>
     | インターネットを利用しています。
-  aside: +link('http://www.soumu.go.jp/iicp/chousakenkyu/data/research/survey/telecom/2012/disabilities2012.pdf')
+  aside: +link('http://www.soumu.go.jp/iicp/chousakenkyu/data/research/survey/telecom/2012/disabilities2012.pdf')(style='font-size: 50%;')
     | 障がいのある方々のインターネット等の利用に関する調査研究［結果概要］<br>
     | 平成２４年６月 総務省 情報通信政策研究所 調査研究部
 
@@ -44,13 +44,13 @@ section
       | と説明している
     blockquote
       | Web accessibility means that people with disabilities can use the Web.
-      aside: +link('https://www.w3.org/WAI/intro/accessibility.php')(style='font-size: 80%; margin-top: 1em;')
+      aside: +link('https://www.w3.org/WAI/intro/accessibility.php')(style='font-size: 75%; margin-top: 1em;')
         | Introduction to Web Accessibility | Web Accessibility Initiative (WAI) | W3C
     p(style='margin-top: 1em;')
       | この狭義のアクセシビリティには反対意見も（強く）あり、<br>
-      | 誰でもどんな環境でもアクセスしやすいという意味で使う人もいる
+      | 誰でもどんな環境でもアクセスしやすいという意味でも使われる
     p(style='margin-top: 1em;')
-      | 当発表では「視覚障がい者向けのアクセシビリティ」だけを扱う
+      | 当発表では「視覚障がい者によるアクセスのしやすさ」だけを扱う
 
 section.text-center
   h5 視覚障がい者の Web 利用方法
@@ -76,7 +76,7 @@ section
         li ディスプレイにレンズをあてて物理的に拡大
 
 section
-  h6 音声読み上げソフト
+  h6 代表的な日本語対応音声読み上げソフト
   dl
     dt スクリーンリーダー
     dd(style='font-size: 66%;'): table.width-fill.nowrap: tbody
@@ -84,6 +84,7 @@ section
         td PC-Talker
         td 41,040 円（税込）
         td 国内シェア 85.3%
+          aside(style='font-size: 50%;') （2013年の調査）
       tr
         td JAWS
         td 153,360 円（税込）
@@ -141,17 +142,18 @@ section
     li 無限スクロールを使わない
 
 section
-  h6(style='margin: 0;') もっとほしいひとへ
-  +link('https://waic.jp/docs/WCAG20/Overview.html')(style='font-size: 75%;')
+  p(style='font-size: 75%;') もっとほしいひとには W3C によるガイドライン
+  +link('https://waic.jp/docs/WCAG20/Overview.html')(style='font-size: 80%;')
+    | Web Content Accessibility Guidelines (WCAG) 2.0
     img.block(src=require('./assets/images/WCAG20.png') alt='WCAG ヘッダーのキャプチャー')
-    | Web Content Accessibility Guidelines (WCAG) 2.0 ［日本語訳］
   aside(style='font-size: 60%; margin-top: 1em;'): p
     | WCAG を日本語でどんな風に発音するかは不明<br>
-    | 英語では W をほぼ発音せず「ぅかーぐ」とか「かーぐ」とか言ってた<br>
+    | 英語では W をほぼ発音せず「ぅかーぐ」とか「かーぐ」とか「ぅぃかーぐ」とか<br>
+    | 日本で「うぃーきゃぐ」とか呼ぶひともいるらしいけど一般的ではなさげ<br>
     | WebCAG ぐらいの略語にしてくれれば読みやすいのに...
 
 section
-  h6(style='font-size: 90%;') Web Content Accessibility Guidelines (WCAG) 2.0
+  h6(style='font-size: 90%;') WCAG 2.0
   p(style='font-size: 75%;')
     | パッと見ハードル高そうな印象を受けるけど文章は割と平易
   blockquote(style='font-size: 75%; margin: 1em; padding: .5em 1em; background-color: #CFE8EF; border: solid #666666 1px; color: black;')
@@ -159,7 +161,8 @@ section
   blockquote(style='font-size: 75%; margin: 1em; padding: .5em 1em; background-color: #CFE8EF; border: solid #666666 1px; color: black;')
     | ガイドライン 2.1 キーボード操作可能: すべての機能をキーボードから利用できるようにすること。
   p(style='font-size: 75%;')
-    | 目次ぐらい目を通しても損にはならない
+    | ↑ こういうガイドラインが 12 コある<br>
+    | 　 目次ぐらい目を通しても損にはならない
 
 section.text-center
   h6 音声読み上げソフトを意識したマークアップ
@@ -194,6 +197,7 @@ section
 section
   p(style='font-size: 75%;') role 属性や aria-* 属性を規定する W3C 勧告<br>
   +link('https://momdo.github.io/wai-aria-1.1/')(style='font-size: 80%;')
+    | Accessible Rich Internet Applications (
     ruby
       | WAI
       rt ウェイ
@@ -201,7 +205,8 @@ section
       rt
       | ARIA
       rt アリア
-    span(style='font-size: 75%; margin-left: 1em;') (Accessible Rich Internet Applications)
+    | )
+    span(style='font-size: 75%; margin-left: 1em;')
     img.block(src=require('./assets/images/WAI-ARIA.png') alt='WAI-ARIA ヘッダーのキャプチャー')
   aside(style='font-size: 60%; margin-top: 1em;'): p
     | ARIA の発音は英語では「あ～りあ」（AR の音は argument の ar と同じ）<br>
@@ -333,35 +338,46 @@ section
     li 超手軽
     li 指摘内容的に 1 度は通しておきたい
     li 総務省いい仕事しとる
-    li CI 用の CLI あるかな？（未調査）
+    li CLI あるかな？（未調査）
 
 section.text-center
-  | 豆知識で終わらせず実践しましょう<br>
-  | （特に自分）
+  p 本編は以上です
+  p
+    | 豆知識で終わらせず<br>
+    | 実践しましょう<br>
+    | （特に私自身）
 
 section
-  h6(style='font-size: 75%;') 参考文献
+  h6(style='font-size: 75%;') おもしろかった参考文献
   div(style='font-size: 50%;')
     +link('http://barrierfree.nict.go.jp/accessibility/proof/report/blind/index.html')
       | 視覚障害者のインターネット利用特性と問題分析：みんなのウェブ
     +link('http://dspace.lib.niigata-u.ac.jp/dspace/handle/10191/27807')(style='margin-top: .5em;')
       | 視覚障害者の携帯電話・スマートフォン・タブレット・パソコン利用状況調査2013: 新潟大学学術リポジトリ Nuar
-    +link('https://qiita.com/magi1125/items/2c2e9d78c6db2724a826')(style='margin-top: .5em;')
-      | モバイルアクセシビリティ：WCAG 2.0やその他W3C/WAIのガイドラインのモバイルへの適用 - Qiita
-    +link('http://weba11y.jp/')(style='margin-top: .5em;')
-      | エー イレブン ワイ［WebA11y.jp］
+    //- +link('https://qiita.com/magi1125/items/2c2e9d78c6db2724a826')(style='margin-top: .5em;')
+    //-   | モバイルアクセシビリティ：WCAG 2.0やその他W3C/WAIのガイドラインのモバイルへの適用 - Qiita
+    //- +link('http://weba11y.jp/')(style='margin-top: .5em;')
+    //-   | エー イレブン ワイ［WebA11y.jp］
     +link('https://king.mineo.jp/magazines/special/387')(style='margin-top: .5em;')
       | 盲目のiPhoneユーザーに聞いた、視覚を使わない驚きのスマホ操作術 | スタッフブログ | マイネ王
 
 section.text-center
-  +link('https://luncheon.github.io/2017-11-25-presentation/')(style='font-size: 75%;')
+  +link('https://git.io/2017-11-25-presentation')(style='font-size: 75%;')
     | このスライド資料は GitHub に置いてあります。
-  p(style='font-size: 60%; margin-top: 1em;') ※ スマホで見れますが 10MB ほどあるので通信量が気になる方は注意
+  p(style='font-size: 60%; margin-top: 1.5em;') スマホで見れますが 10MB (gzip: 6MB) ほどあるので通信量が気になる方は注意
 
 section.text-center
   h5 余談
 
 - var digressionIndex = 0
+
+section
+  h6 余談 #{++digressionIndex} Japan Accessibility Conference (JAC)
+  article(style='font-size: 75%;')
+    p というイベントの第1回が今月11日に開催されたらしい
+    p 動画配信されているので興味と暇があれば
+    +link('https://japan-a11y-conf.com/')(style='text-align: right;')
+      | Japan Accessibility Conference(JAC) vol.1
 
 section
   h6 余談 #{++digressionIndex} インクルーシブデザインについて
@@ -431,7 +447,7 @@ section
   h6 余談 #{++digressionIndex} 「障害」「障碍」「障がい」論争について
   article(style='font-size: 80%;')
     p
-      | 戦後一般的だった「障害」「障害者」という表記に対して<br>
+      | 戦後一般的になった「障害」「障害者」という表記に対して<br>
       | 「害」という文字の印象が悪いから「障がい」表記にすると<br>
       | 一部の地方公共団体が言い出した（2000年代前半頃～）
 
@@ -440,11 +456,11 @@ section
   article(style='font-size: 80%;')
     p
       | こういうのはだいたい言い出しっぺが悪い
-    p
+    p(style='margin-top: 1em;')
       | もともと誰も「障害」という表記に特別な印象を抱てないのに、印象が悪いという主張が現れるとそう見える人が現れる
     p(style='margin-top: 1em;')
       | handicapped は印象が悪いと言って impaired, invalid, disabled, challenged, disability, survivor など新しい言葉を割り当てては混乱と論争を巻き起こすが、<br>
-      | どんなシニフィアン（表現）を選んでもシニフィエ（意味）側が時間とともに偏見を含むようになっていくだけ<br>
+      | どんなシニフィアン（表現）を選んでもシニフィエ（意味）側が時間とともに偏見を含むよう変化していくだけ<br>
       | （その言葉を差別的な意味で使う人が現れる、あるいは差別的な意味で受け取る人が現れる）
 
 section
@@ -455,7 +471,8 @@ section
       | 歴史的変遷や各派閥の主張がまとまっていておもしろい
     aside: +link('http://www8.cao.go.jp/shougai/suishin/kaikaku/s_kaigi/k_26/pdf/s2.pdf')(style='font-size: 75%; margin-top: .5em;')
       | 「障害」の表記に関する検討結果について<br>
-      | 平成２２年１１月２２日 「障害」の表記に関する作業チーム
+      | 平成２２年１１月２２日<br>
+      | 「障害」の表記に関する作業チーム
     p(style='margin-top: 1em;')
       | ちなみに<br>
       | 当発表では基本的に「障がい」表記とした（引用箇所を除く）<br>

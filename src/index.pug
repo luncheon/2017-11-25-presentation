@@ -19,3 +19,9 @@ html(lang="ja")
       gtag('config', 'UA-64398169-1');
   body
     .reveal: .slides: include ./slides.pug
+    .flex.absolute(style='color: #42affa; align-items: center; right: 2vw; bottom: 15px; font-size: 3vh; font-family: consolas,monospace;')
+      button.mdi.mdi-chevron-left.slide-prev(disabled)
+      .current-slide-number(style='width: 1.25em; text-align: right;')
+      span(style='margin: 0 .25em;') /
+      .last-slide-number(style='width: 1.25em;')
+      button.mdi.mdi-chevron-right.slide-next(disabled)
