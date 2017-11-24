@@ -11,5 +11,11 @@ html(lang="ja")
       content="width=device-width, initial-scale=1",
     )
     title ［社内発表資料］ 視覚障がい者向け Web アクセシビリティ入門以前
+    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-64398169-1")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-64398169-1');
   body
     .reveal: .slides: include ./slides.pug
