@@ -2,7 +2,7 @@ mixin link(href)
   a.block.link-text(target='_blank' href=href style!=attributes.style)
     p(style='color: white; margin: 0;')
       block
-    p(style='margin: 0;')= href
+    p.link-text--url(style='margin: 0;')= href
 
 section
   p.text-center(style='font-size: 120%;')
@@ -17,7 +17,7 @@ section
     | 視覚障がい者向け<br>
     | Web アクセシビリティ<br>
     | 入門以前
-  div.text-right(style='margin-top: 10%;')
+  div.text-right(style='margin-top: 5%;')
     | 2017年11月25日
 
 section.text-center
@@ -331,33 +331,13 @@ section
   h6 miChecker 所感
   ul(style='font-size: 80%;')
     li 超手軽
-    li 指摘内容的にも 1 度は通しておきたい
+    li 指摘内容的に 1 度は通しておきたい
     li 総務省いい仕事しとる
     li CI 用の CLI あるかな？（未調査）
 
 section.text-center
-  h6 インクルーシブデザインについて
-
-section
-  h6 インクルーシブデザインについて
-  article(style='font-size: 75%;')
-    p
-      | 最近『インクルーシブデザイン』という言葉を目にする
-    p
-      | 『アクセシブル』も『ユニバーサル』も『インクルーシブ』も<br>
-      | 「多様な利用者・利用環境への配慮」という文脈を形成する意味で<br>
-      | 同じように利用される
-    p
-      | が、『インクルーシブデザイン』という言葉を選ぶときは<br>
-      | 「障がい者や高齢者を巻き込んで<strong class="strong-color">一緒にデザインする</strong>」<br>
-      | という意味を<span class="strong-color">込めたり込めなかったり</span>する点に留意が必要
-
-section
-  +link('http://inclusivedesignprinciples.org/ja/')(style='font-size: 90%;')
-    | インクルーシブデザインの原則<br>
-    | （「Inclusive Design Principles」日本語訳）
-    img.block(src=require('./assets/images/InclusiveDesignPrinciples.png') alt='インクルーシブデザインの原則ページキャプチャー')
-  p(style='font-size: 66%;') ↑ とても読みやすいアクセシビリティガイドラインになっていてオススメ
+  | 豆知識で終わらせず実践しましょう<br>
+  | （特に自分）
 
 section
   h6(style='font-size: 75%;') 参考文献
@@ -366,22 +346,49 @@ section
       | 視覚障害者のインターネット利用特性と問題分析：みんなのウェブ
     +link('http://dspace.lib.niigata-u.ac.jp/dspace/handle/10191/27807')(style='margin-top: .5em;')
       | 視覚障害者の携帯電話・スマートフォン・タブレット・パソコン利用状況調査2013: 新潟大学学術リポジトリ Nuar
-    +link('https://king.mineo.jp/magazines/special/387')(style='margin-top: .5em;')
-      | 盲目のiPhoneユーザーに聞いた、視覚を使わない驚きのスマホ操作術 | スタッフブログ | マイネ王
     +link('https://qiita.com/magi1125/items/2c2e9d78c6db2724a826')(style='margin-top: .5em;')
       | モバイルアクセシビリティ：WCAG 2.0やその他W3C/WAIのガイドラインのモバイルへの適用 - Qiita
     +link('http://weba11y.jp/')(style='margin-top: .5em;')
       | エー イレブン ワイ［WebA11y.jp］
+    +link('https://king.mineo.jp/magazines/special/387')(style='margin-top: .5em;')
+      | 盲目のiPhoneユーザーに聞いた、視覚を使わない驚きのスマホ操作術 | スタッフブログ | マイネ王
 
 section.text-center
-  | 豆知識で終わらせず実践しましょう<br>
-  | （特に自分）
+  +link('https://luncheon.github.io/2017-11-25-presentation/')(style='font-size: 75%;')
+    | このスライド資料は GitHub に置いてあります。
+  p(style='font-size: 60%; margin-top: 1em;') ※ スマホで見れますが 10MB ほどあるので通信量が気になる方は注意
 
 section.text-center
   h5 余談
 
+- var digressionIndex = 0
+
 section
-  h6 余談 1 視覚障がい者の人数と基準の見直し
+  h6 余談 #{++digressionIndex} インクルーシブデザインについて
+  article(style='font-size: 75%;')
+    p
+      | 最近『インクルーシブデザイン』という言葉を目にする
+    p(style='margin-top: 1em;')
+      | 『アクセシブル』も『ユニバーサル』も『インクルーシブ』も<br>
+      | 「多様な利用者・利用環境への配慮」という文脈を形成する意味で<br>
+      | 同じように利用される
+    p(style='margin-top: 1em;')
+      | が、『インクルーシブデザイン』という言葉を選ぶときは<br>
+      | 「障がい者や高齢者を巻き込んで<strong class="strong-color">一緒にデザインする</strong>」<br>
+      | という意味を<span class="strong-color">込めたり込めなかったり</span>する点に留意が必要
+
+section
+  h6 余談 #{digressionIndex} インクルーシブデザインについて
+  +link('http://inclusivedesignprinciples.org/ja/')(style='font-size: 90%;')
+    | インクルーシブデザインの原則<br>
+    | （「Inclusive Design Principles」日本語訳）
+    img.block(src=require('./assets/images/InclusiveDesignPrinciples.png') alt='インクルーシブデザインの原則ページキャプチャー')
+  p(style='font-size: 70%;')
+    | ↑ とても読みやすいアクセシビリティガイドラインになっているので<br>
+    | 　 一読オススメ
+
+section
+  h6 余談 #{++digressionIndex} 視覚障がい者の人数と基準の見直し
   article(style='font-size: 80%;')
     p(style='margin-top: 1em;')
       | 日本の視覚障がい者数は約 34 万人<br>
@@ -399,7 +406,7 @@ section
       | 視覚障害の認定基準に関する検討会 ｜厚生労働省
 
 section
-  h6 余談 2 障害者差別解消法について
+  h6 余談 #{++digressionIndex} 障害者差別解消法について
   article
     p(style='font-size: 80%;')
       | 2016年4月1日<br>
@@ -414,14 +421,14 @@ section
     | 障害を理由とする差別の解消の推進 - 内閣府
 
 section
-  h6 余談 2 障害者差別解消法について
+  h6 余談 #{digressionIndex} 障害者差別解消法について
   p(style='font-size: 75%; margin: 0;') ちなみにどこかで見たような 5 段階評価表があったりもします
   img.block(src=require('./assets/images/ウェブアクセシビリティ取組確認・評価表.png') alt='ウェブアクセシビリティ取組確認・評価表のエクセルシート画面キャプチャー' style='margin: 0;')
   aside: +link('http://www.soumu.go.jp/main_sosiki/joho_tsusin/b_free/guideline.html')(style='margin: 0;')
     | 総務省｜情報バリアフリー環境の整備｜みんなの公共サイト運用ガイドライン（2016年版）
 
 section
-  h6 余談 3 「障害」「障碍」「障がい」論争について
+  h6 余談 #{++digressionIndex} 「障害」「障碍」「障がい」論争について
   article(style='font-size: 80%;')
     p
       | 戦後一般的だった「障害」「障害者」という表記に対して<br>
@@ -429,7 +436,7 @@ section
       | 一部の地方公共団体が言い出した（2000年代前半頃～）
 
 section
-  h6 余談 3 「障害」「障碍」「障がい」論争について
+  h6 余談 #{digressionIndex} 「障害」「障碍」「障がい」論争について
   article(style='font-size: 80%;')
     p
       | こういうのはだいたい言い出しっぺが悪い
@@ -441,7 +448,7 @@ section
       | （その言葉を差別的な意味で使う人が現れる、あるいは差別的な意味で受け取る人が現れる）
 
 section
-  h6 余談 3 「障害」「障碍」「障がい」論争について
+  h6 余談 #{digressionIndex} 「障害」「障碍」「障がい」論争について
   article(style='font-size: 80%;')
     p
       | 内閣府による表記検討結果資料を見ると<br>
